@@ -56,7 +56,7 @@ document.querySelector(".theme-switch").addEventListener( "click", function() {
   }
 })
 
-document.querySelector(".theme-switch").addEventListener( "touch", function() {
+document.querySelector(".theme-switch").addEventListener( "touchstart", function() {
   if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-light');
   } else {
