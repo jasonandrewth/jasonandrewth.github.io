@@ -48,7 +48,7 @@ function setTheme(themeName) {
 
 // function to toggle between light and dark theme
 
-document.querySelector(".theme-switch").addEventListener( "click", function() {
+document.querySelector(".theme-switch").addEventListener( "click, touch", function() {
   if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-light');
   } else {
@@ -56,17 +56,8 @@ document.querySelector(".theme-switch").addEventListener( "click", function() {
   }
 })
 
-//same on touch
 
-document.querySelector(".theme-switch").addEventListener( "touchstart", function() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light');
-  } else {
-      setTheme('theme-dark');
-  }
-})
-
-// Immediately invoked function to set the theme on initial load
+// IIFE to set the theme on initial load
 (function () {
   if (localStorage.getItem('theme') === 'theme-light') {
       setTheme('theme-light');
