@@ -48,7 +48,15 @@ function setTheme(themeName) {
 
 // function to toggle between light and dark theme
 
-document.querySelector(".theme-switch").addEventListener( "click, touchstart", function() {
+document.querySelector(".theme-switch").addEventListener( "click", function() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+  } else {
+      setTheme('theme-dark');
+  }
+})
+
+document.querySelector(".theme-switch").addEventListener( "touch", function() {
   if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-light');
   } else {
