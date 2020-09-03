@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.theme-light {
+  --color-secondary: #fbfbfe;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-secondary: #0e1111;
+  --font-color: #ffffff;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  min-height: 100vh;
+
+  background-color: var(--color-secondary);
+  color: var(--font-color);
+  transition: color 0.5s ;
+  transition: background-color 0.5s ;
+}
+
+header {
+
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+header.h1 {
+  font-size: 20px;
+}
+.theme-switch {
+  border-radius: 200px;
+  background-color: var(--font-color);
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+
+  transition: background-color 0.5s;
+}
+
+
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 80vw;
+}
+
+@media (min-width: 800px) {
+  .theme-switch {
+    height: 40px;
+    width: 40px;}
+
+  body {
+    font-size: 18px;
+  }
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 70vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .theme-switch {
+    height: 50px;
+    width: 50px;}
+
+  body {
+    font-size: 24px;
+  }
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 75vw;
+  }
+}
